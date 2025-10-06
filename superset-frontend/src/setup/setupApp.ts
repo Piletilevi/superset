@@ -24,6 +24,7 @@ import {
   ClientErrorObject,
 } from '@superset-ui/core';
 import setupErrorMessages from 'src/setup/setupErrorMessages';
+import 'src/styles/overrides.css';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 declare global {
