@@ -41,6 +41,7 @@ import { logEvent } from 'src/logger/actions';
 import { store } from 'src/views/store';
 import { RootContextProviders } from './RootContextProviders';
 import { ScrollToTop } from './ScrollToTop';
+import 'src/styles/overrides.css';
 
 setupApp();
 setupPlugins();
