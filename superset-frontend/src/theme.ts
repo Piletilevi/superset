@@ -17,3 +17,4 @@
  * under the License.
  */
 import 'src/public-path';
+import 'src/styles/overrides.css';
