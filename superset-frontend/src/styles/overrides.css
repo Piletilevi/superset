@@ -49,8 +49,8 @@
   color: var(--text-on-surface-primary);
 }
 
-.ant-dropdown-trigger,
-.ant-btn.ant-btn-variant-link {
+.ant-btn.ant-btn-variant-link,
+.ant-dropdown-trigger.ant-btn.ant-btn-variant-link {
   border: none;
 }
 
@@ -211,4 +211,21 @@ span.ant-tag:hover {
 
 .ant-alert[data-test='bulk-select-controls'] .ant-alert-close-icon:hover {
   color: var(--text-on-surface-primary);
+}
+
+/* ==========================================================================
+   BADGE OVERRIDES
+   ========================================================================== */
+
+.ant-badge .ant-badge-count {
+  background-color: var(--bg-neutral) !important;
+  color: var(--text-on-surface-primary) !important;
+}
+.ant-badge .ant-badge-count:hover {
+  background-color: var(--bg-neutral-hover) !important;
+  color: var(--text-on-surface-primary) !important;
+}
+.ant-badge .ant-badge-count:active {
+  background-color: var(--bg-neutral-focus) !important;
+  color: var(--text-on-surface-primary) !important;
 }
