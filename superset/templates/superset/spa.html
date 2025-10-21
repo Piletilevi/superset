@@ -68,6 +68,9 @@
         {% endfor %}
       {% endif %}
 
+      {# Load PLG Common CSS bundles #}
+      {{ css_bundle(assets_prefix, 'preamble') }}
+
     {% endblock %}
 
     {{ js_bundle(assets_prefix, 'theme') }}
