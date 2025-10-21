@@ -64,6 +64,7 @@ RUN --mount=type=bind,source=./superset-frontend/package.json,target=./package.j
     --mount=type=bind,source=./superset-frontend/package-lock.json,target=./package-lock.json \
     --mount=type=cache,target=/root/.cache \
     --mount=type=cache,target=/root/.npm \
+    --mount=type=secret,id=npmrc,target=/root/.npmrc \
     if [ "$DEV_MODE" = "false" ]; then \
         npm ci; \
     else \
