@@ -1,0 +1,231 @@
+/* ==========================================================================
+   SUPERSET THEME OVERRIDES - COMMON UI ASSETS INTEGRATION
+   ========================================================================== */
+
+/* ==========================================================================
+   BUTTON COMPONENT OVERRIDES
+   ========================================================================== */
+
+/* Button base */
+.ant-btn {
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-lg);
+  transition: all 0.2s ease;
+}
+
+/* Primary Button */
+.ant-btn.ant-btn-primary {
+  background-color: var(--bg-brand);
+  border-color: var(--bg-brand);
+  color: var(--text-on-brand-primary);
+}
+
+.ant-btn.ant-btn-primary:hover {
+  background-color: var(--bg-brand-hover);
+  border-color: var(--bg-brand-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--ant-box-shadow);
+}
+
+.ant-btn.ant-btn-primary:active {
+  background-color: var(--secondary-600);
+  border-color: var(--secondary-600);
+  transform: translateY(0);
+}
+
+.ant-btn.ant-btn-primary:focus {
+  box-shadow: 0 0 0 2px var(--primary-color-outline);
+}
+
+/* Secondary Button */
+.ant-btn.ant-btn-default {
+  background-color: var(--bg-surface);
+  border-color: var(--text-on-surface-primary);
+  color: var(--text-on-surface-primary);
+}
+
+.ant-btn.ant-btn-default > span {
+  color: var(--text-on-surface-primary);
+}
+
+.ant-btn.ant-btn-variant-link,
+.ant-dropdown-trigger.ant-btn.ant-btn-variant-link {
+  border: none;
+}
+
+.superset-button.superset-button-secondary.ant-btn.ant-btn-default:hover {
+  background-color: var(--bg-neutral-hover);
+  border-color: var(--text-on-surface-primary);
+  color: var(--text-on-surface-primary);
+  transform: translateY(-1px);
+  box-shadow: var(--ant-box-shadow);
+}
+
+.ant-btn.ant-btn-default:active {
+  background-color: var(--bg-neutral-focus);
+  transform: translateY(0);
+}
+
+/* Ghost Button */
+.ant-btn.ant-btn-ghost {
+  background-color: transparent;
+  border-color: var(--bg-brand);
+  color: var(--bg-brand);
+}
+
+.ant-btn.ant-btn-ghost:hover {
+  background-color: var(--bg-brand-light);
+  color: var(--text-on-brand-primary);
+  transform: translateY(-1px);
+  box-shadow: var(--ant-box-shadow);
+}
+
+/* Danger Button */
+.ant-btn.ant-btn-dangerous {
+  background-color: var(--error-400);
+  border-color: var(--bg-error);
+  color: var(--text-on-error-primary);
+}
+
+.ant-btn.ant-btn-dangerous:hover {
+  background-color: var(--bg-error-hover);
+  border-color: var(--bg-error-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--ant-box-shadow);
+}
+
+/* ==========================================================================
+   DISABLED BUTTON STATES - ALL TYPES
+   ========================================================================== */
+
+/* Disabled - common across button variants */
+.ant-btn:is(
+    .ant-btn-primary,
+    .ant-btn-default,
+    .ant-btn-ghost,
+    .ant-btn-dangerous
+  ):disabled,
+.ant-btn:is(
+    .ant-btn-primary,
+    .ant-btn-default,
+    .ant-btn-ghost,
+    .ant-btn-dangerous
+  ).ant-btn-disabled,
+.ant-btn:is(
+    .ant-btn-primary,
+    .ant-btn-default,
+    .ant-btn-ghost,
+    .ant-btn-dangerous
+  ):disabled:hover,
+.ant-btn:is(
+    .ant-btn-primary,
+    .ant-btn-default,
+    .ant-btn-ghost,
+    .ant-btn-dangerous
+  ).ant-btn-disabled:hover {
+  background-color: var(--bg-neutral);
+  border-color: var(--bg-neutral);
+  color: var(--text-on-surface-tertiary);
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Disabled Secondary Button text color for span */
+.ant-btn.ant-btn-default:disabled > span,
+.ant-btn.ant-btn-default.ant-btn-disabled > span {
+  color: var(--text-on-surface-tertiary);
+}
+
+/* ==========================================================================
+   MENU COMPONENT OVERRIDES
+   ========================================================================== */
+
+.ant-menu .ant-menu-item:hover,
+.ant-menu .ant-menu-item:has(> span > .active) {
+  background-color: var(--bg-neutral-focus) !important;
+}
+
+/* ==========================================================================
+   TABLE COMPONENT OVERRIDES
+   ========================================================================== */
+table > tbody > tr > th.hoverable:hover {
+  background-color: var(--bg-neutral-hover) !important;
+}
+
+/* ==========================================================================
+   TAG COMPONENT OVERRIDES
+   ========================================================================== */
+
+span.ant-tag {
+  background-color: var(--bg-neutral);
+  color: var(--text-on-surface-primary);
+  border-color: var(--stroke-on-surface-primary);
+}
+
+span.ant-tag:hover {
+  background-color: var(--bg-neutral-hover);
+  color: var(--text-on-surface-primary);
+  border-color: var(--stroke-on-surface-primary);
+}
+
+/* Ensure icons inside tags follow the tag text color */
+.ant-tag .anticon {
+  color: currentColor !important;
+  font-size: 12px !important;
+}
+
+/* Specific statuses */
+.ant-tag[data-status='published'] {
+  background-color: var(--secondary-100) !important;
+  color: var(--secondary-700) !important;
+  border-color: var(--secondary-300) !important;
+}
+
+.ant-tag[data-status='draft'] {
+  background-color: var(--primary-100) !important;
+  color: var(--primary-700) !important;
+  border-color: var(--primary-300) !important;
+}
+
+/* ==========================================================================
+   BULK SELECT BAR OVERRIDES
+   ========================================================================== */
+
+/* Override the bulk select bar (Alert component) to use common-ui-assets colors */
+.ant-alert[data-test='bulk-select-controls'] {
+  background-color: var(--bg-surface-secondary);
+  border: none;
+  color: var(--text-on-surface-primary);
+}
+
+.ant-alert[data-test='bulk-select-controls'] .ant-alert-message {
+  color: var(--text-on-surface-primary);
+}
+
+.ant-alert[data-test='bulk-select-controls'] .ant-alert-close-icon {
+  color: var(--text-on-surface-secondary);
+}
+
+.ant-alert[data-test='bulk-select-controls'] .ant-alert-close-icon:hover {
+  color: var(--text-on-surface-primary);
+}
+
+/* ==========================================================================
+   BADGE OVERRIDES
+   ========================================================================== */
+
+.ant-badge .ant-badge-count {
+  background-color: var(--bg-neutral) !important;
+  color: var(--text-on-surface-primary) !important;
+}
+.ant-badge .ant-badge-count:hover {
+  background-color: var(--bg-neutral-hover) !important;
+  color: var(--text-on-surface-primary) !important;
+}
+.ant-badge .ant-badge-count:active {
+  background-color: var(--bg-neutral-focus) !important;
+  color: var(--text-on-surface-primary) !important;
+}
