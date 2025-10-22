@@ -19,7 +19,6 @@
 import { setConfig as setHotLoaderConfig } from 'react-hot-loader';
 import './styles/plg-common-styles-imports.css';
 import './styles/overrides.css';
-import dayjs from 'dayjs';
 // eslint-disable-next-line no-restricted-imports
 import {
   configure,
