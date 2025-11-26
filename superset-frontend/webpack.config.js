@@ -139,7 +139,12 @@ const plugins = [
   }),
 
   new CopyPlugin({
-    patterns: ['package.json', { from: 'src/assets/images', to: 'images' }],
+    patterns: [
+      'package.json',
+      { from: 'src/assets/images', to: 'images' },
+      { from: 'src/styles/plg-common-styles-imports.css', to: 'plg-common-styles-imports.css' },
+      { from: 'src/styles/overrides.css', to: 'overrides.css' }
+    ],
   }),
 
   // static pages
@@ -495,11 +500,11 @@ const config = {
           isDevMode
             ? 'style-loader'
             : {
-                loader: MiniCssExtractPlugin.loader,
-                options: {
-                  publicPath: MINI_CSS_EXTRACT_PUBLICPATH,
-                },
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                publicPath: MINI_CSS_EXTRACT_PUBLICPATH,
               },
+            },
           {
             loader: 'css-loader',
             options: {

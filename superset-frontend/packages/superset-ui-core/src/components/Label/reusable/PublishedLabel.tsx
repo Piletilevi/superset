@@ -45,6 +45,7 @@ export const PublishedLabel: React.FC<PublishedLabelProps> = ({
       type={labelType}
       icon={icon}
       onClick={onClick}
+      data-status={isPublished ? 'published' : 'draft'}
       style={{
         color: isPublished ? theme.colorSuccessText : theme.colorPrimaryText,
       }}
